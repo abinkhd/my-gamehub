@@ -29,7 +29,7 @@ const useData = <T>(
         .then((res) => {
           setData(res.data.results);
           setCount(res.data.count);
-          console.log(res.data.results);
+          // console.log(res.data.results);
           setLoading(false);
         })
         .catch((error) => {
