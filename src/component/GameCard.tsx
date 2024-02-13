@@ -1,17 +1,9 @@
-import {
-  Badge,
-  Card,
-  CardBody,
-  HStack,
-  Heading,
-  Image,
-  Text,
-} from "@chakra-ui/react";
-import { FaPlus } from "react-icons/fa";
+import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
 import { Game } from "../hooks/useGames";
 import PlatFormIconList from "./PlatFormIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "./../services/getCroppedImageUrl";
+import Emoji from "./Emoji";
 
 interface Props {
   game: Game;
@@ -29,6 +21,7 @@ const GameCard = ({ game }: Props) => {
           <Heading fontSize="1xl">{game.name} </Heading>{" "}
           <CriticScore score={game.metacritic} />
         </HStack>
+        <Emoji rating={game.rating_top} />
       </CardBody>
     </Card>
   );
