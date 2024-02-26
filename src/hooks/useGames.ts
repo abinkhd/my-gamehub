@@ -1,7 +1,6 @@
-import { FetchResponse } from "./useData";
 import { GameQuery } from "./../App";
 import { useQuery } from "@tanstack/react-query";
-import apiClient from "../services/api-client";
+import apiClient, { FetchResponse } from "../services/api-client";
 import { Platform } from "./usePlatforms";
 
 export interface Game {
